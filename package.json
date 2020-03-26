@@ -9,8 +9,8 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Blad3Mak3r",
+  "license": "Apache-2.0",
   "dependencies": {
     "@now/node": "^1.5.0",
     "axios": "^0.19.2",
