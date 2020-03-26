@@ -15,3 +15,4 @@ Install the required dependencies and run it:
 npm install
 npm run dev
 ```
+Now go to `` http://localhost:3000/api `` and enjoy.
