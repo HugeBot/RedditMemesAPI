@@ -1,5 +1,5 @@
 # RedditMemesAPI
-> Small microservice to get random Reddit memes from [r/Memes](https://www.reddit.com/r/memes/), 
+> Tiny microservice to get random Reddit memes from [r/Memes](https://www.reddit.com/r/memes/), 
 [r/DankeMemes](https://www.reddit.com/r/dankmemes/) and [r/MeIRL](https://www.reddit.com/r/meirl/), 
 built under [Next.js](https://nextjs.org/) and [Typescript](https://www.typescriptlang.org/)
 
