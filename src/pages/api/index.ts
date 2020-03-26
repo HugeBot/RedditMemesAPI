@@ -9,7 +9,13 @@ export default async (req: NowRequest, res: NowResponse) => {
         const result = await Axios.get(`https://www.reddit.com/r/${randomReddit()}/hot/.json?count=100`)
 
         if(result.status == 200) {
-            let post = result.data.data.children[randomNumber(result.data.data.children.length)].data;
+            const children = result.data.data.children;
+            let post = children[randomNumber(children.length)].data;
+
+            // While url is not image select another one
+            while(!checkURL(post.url)) {
+                post = children[randomNumber(children.length)].data;
+            }
 
             const response = {
                 id: post.id,
@@ -36,10 +42,17 @@ export default async (req: NowRequest, res: NowResponse) => {
     }
 }
 
+// Get a random number from 0 to gived
 function randomNumber(number: number): number {
     return Math.floor(Math.random() * number);
 }
 
+// Get a random subreddit from the list
 function randomReddit(): String {
     return subreddits[randomNumber(subreddits.length)];
+}
+
+// Check if the given url is a image
+function checkURL(url: string): boolean {
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
 }
