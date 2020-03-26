@@ -14,7 +14,7 @@ const subreddits = {
 export default async (req: NowRequest, res: NowResponse) => {
 
     try {
-        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit()}/hot/.json?count=100`)
+        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit(req.query["lang"].toString())}/hot/.json?count=100`)
 
         if(result.status == 200) {
             const children = result.data.data.children;
@@ -56,8 +56,22 @@ function randomNumber(number: number): number {
 }
 
 // Get a random subreddit from the list
-function randomReddit(): String {
-    return subreddits[randomNumber(subreddits.length)];
+function randomReddit(lang: string | string[]): String {
+    console.log(lang)
+    if (!lang) return subreddits.en[randomNumber(subreddits.en.length)];
+
+    switch(lang) {
+        case "es":
+            return subreddits.es[randomNumber(subreddits.es.length)];
+        case "fr":
+            return subreddits.fr[randomNumber(subreddits.fr.length)];
+        case "de":
+            return subreddits.de[randomNumber(subreddits.de.length)];
+        case "it":
+            return subreddits.it[randomNumber(subreddits.it.length)];
+        default:
+            return subreddits.en[randomNumber(subreddits.en.length)];
+    }
 }
 
 // Check if the given url is a image
