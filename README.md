@@ -3,10 +3,6 @@
 [r/DankeMemes](https://www.reddit.com/r/dankmemes/) and [r/MeIRL](https://www.reddit.com/r/meirl/), 
 built under [Next.js](https://nextjs.org/) and [Typescript](https://www.typescriptlang.org/)
 
-Used by [HUGE](https://huge.blademaker.tv/).
-
-- - -
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Blad3Mak3r/RedditMemesAPI)
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/Blad3Mak3r/RedditMemesAPI)
 
 ## Getting started
