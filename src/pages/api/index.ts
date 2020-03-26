@@ -1,7 +1,7 @@
 import { NowRequest, NowResponse } from '@now/node'
 import Axios from 'axios';
 
-const subreddits: String[] = new Array<String>("meme", "dankmemes", "meirl");
+const subreddits: String[] = new Array<String>("memes", "dankmemes", "meirl");
 
 export default async (req: NowRequest, res: NowResponse) => {
 
