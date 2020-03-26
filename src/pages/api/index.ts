@@ -1,7 +1,15 @@
 import { NowRequest, NowResponse } from '@now/node'
 import Axios from 'axios';
 
-const subreddits: String[] = new Array<String>("memes", "dankmemes", "meirl");
+const subreddits = {
+    en: ["memes", "dankmemes", "meirl"],
+    es: ["memesesp", "memesenespanol", "spanishmeme"],
+    fr: ["FrenchMemes"],
+    ru: ["CommunismMemes", "YouSeeComrade"],
+    de: ["GermanMemes"],
+    it: ["italianmemes"],
+    mx: ["MexicanMemes"]
+}
 
 export default async (req: NowRequest, res: NowResponse) => {
 
