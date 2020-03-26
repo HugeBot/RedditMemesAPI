@@ -10,12 +10,6 @@ export default async (req: NowRequest, res: NowResponse) => {
 
         if(result.status == 200) {
             let post = result.data.data.children[randomNumber(result.data.data.children.length)].data;
-            let url: string = post.url;
-
-            /*while(!url.endsWith(".png") || !url.endsWith(".jpg")) {
-                post = result.data.data.children[randomNumber(result.data.data.children.length)].data;
-                url = post.url;
-            }*/
 
             const response = {
                 id: post.id,

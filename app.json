@@ -1,0 +1,7 @@
+{
+    "name": "RedditMemesAPI",
+    "description": "Tiny microservice to get random Reddit memes from r/Memes, r/DankeMemes and r/MeIRL, built under Next.js and Typescript",
+    "repository": "https://github.com/Blad3Mak3r/RedditMemesAPI",
+    "logo": "",
+    "keywords": ["nextjs", "memes", "reddit", "typescript"]
+}
