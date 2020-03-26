@@ -6,7 +6,7 @@ const subreddits: String[] = new Array<String>("memes", "dankmemes", "meirl");
 export default async (req: NowRequest, res: NowResponse) => {
 
     try {
-        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit()}/top/.json?count=100`)
+        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit()}/hot/.json?count=100`)
 
         if(result.status == 200) {
             let post = result.data.data.children[randomNumber(result.data.data.children.length)].data;
