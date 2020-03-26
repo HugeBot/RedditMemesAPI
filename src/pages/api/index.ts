@@ -14,7 +14,7 @@ const subreddits = {
 export default async (req: NowRequest, res: NowResponse) => {
 
     try {
-        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit(req.query["lang"].toString())}/hot/.json?count=100`)
+        const result = await Axios.get(`https://www.reddit.com/r/${randomReddit(req.query["lang"])}/hot/.json?count=100`)
 
         if(result.status == 200) {
             const children = result.data.data.children;
@@ -60,7 +60,7 @@ function randomReddit(lang: string | string[]): String {
     console.log(lang)
     if (!lang) return subreddits.en[randomNumber(subreddits.en.length)];
 
-    switch(lang) {
+    switch(lang.toString()) {
         case "es":
             return subreddits.es[randomNumber(subreddits.es.length)];
         case "fr":
