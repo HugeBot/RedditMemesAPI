@@ -1,5 +1,6 @@
 import { NowRequest, NowResponse } from '@now/node'
 import Axios from 'axios';
+import { randomNumber, checkURL } from '../../utils';
 
 const subreddits = {
     en: ["memes", "dankmemes", "meirl"],
@@ -50,14 +51,9 @@ export default async (req: NowRequest, res: NowResponse) => {
     }
 }
 
-// Get a random number from 0 to gived
-function randomNumber(number: number): number {
-    return Math.floor(Math.random() * number);
-}
 
 // Get a random subreddit from the list
 function randomReddit(lang: string | string[]): String {
-    console.log(lang)
     if (!lang) return subreddits.en[randomNumber(subreddits.en.length)];
 
     switch(lang.toString()) {
@@ -72,9 +68,4 @@ function randomReddit(lang: string | string[]): String {
         default:
             return subreddits.en[randomNumber(subreddits.en.length)];
     }
-}
-
-// Check if the given url is a image
-function checkURL(url: string): boolean {
-    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
 }
