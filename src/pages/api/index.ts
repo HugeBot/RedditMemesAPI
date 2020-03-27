@@ -1,6 +1,7 @@
 import { NowRequest, NowResponse } from '@now/node'
 import Axios from 'axios';
 import { randomNumber, checkURL } from '../../utils';
+import { Meme } from '../../interfaces/Meme';
 
 const subreddits = {
     en: ["memes", "dankmemes", "meirl"],
@@ -8,8 +9,7 @@ const subreddits = {
     fr: ["FrenchMemes"],
     ru: ["CommunismMemes", "YouSeeComrade"],
     de: ["GermanMemes"],
-    it: ["italianmemes"],
-    mx: ["MexicanMemes"]
+    it: ["italianmemes"]
 }
 
 export default async (req: NowRequest, res: NowResponse) => {
@@ -26,20 +26,8 @@ export default async (req: NowRequest, res: NowResponse) => {
                 post = children[randomNumber(children.length)].data;
             }
 
-            const response = {
-                id: post.id,
-                subreddit: post.subreddit,
-                title: post.title,
-                author: post.author,
-                image: post.url,
-                ups: post.ups,
-                downs: post.downs,
-                score: post.score,
-                created_utc: post.created_utc
-            }
-
             res.statusCode == 200;
-            res.json(response)
+            res.json(new Meme(post))
         } else {
             res.statusCode == res.statusCode;
             res.json(result.data);
