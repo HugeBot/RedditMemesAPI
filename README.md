@@ -8,6 +8,7 @@ built under [Next.js](https://nextjs.org/) and [Typescript](https://www.typescri
 
 
 ## Getting started
+- - -
 > First clone this repository and install dependencies:
 > ```shell scrip
 > git clone https://github.com/Blad3Mak3r/RedditMemesAPI.git
@@ -19,9 +20,24 @@ built under [Next.js](https://nextjs.org/) and [Typescript](https://www.typescri
 > npm install
 > npm run dev
 > ```
+
 Now go to `` http://localhost:3000/api `` and enjoy.
 
+## Endpoints
+- - -
+**Random meme from Top SubReddits**
+> **GET** ``/api ``
+
+
+**Random meme from [Country](#languages) Top SubReddits**
+> **GET** ``/api?lang=en``
+
+
+**Random Anime meme**
+> **GET** ``/api/anime``
+
 ## Languages
+- - -
 Currently supports the following languages:
 
 | Default   | Language | Url Query    |
@@ -32,5 +48,3 @@ Currently supports the following languages:
 | Russian   | русский  | /api?lang=ru |
 | German    | Deutsch  | /api?lang=de |
 | Italian   | Italiano | /api?lang=it |
-
-More languages ​​coming soon
