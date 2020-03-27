@@ -36,6 +36,9 @@ Now go to `` http://localhost:3000/api `` and enjoy.
 **Random Anime meme**
 > **GET** ``/api/anime``
 
+**Random Sponge Bob meme**
+> **GET** ``/api/spongebob``
+
 ## Languages
 - - -
 Currently supports the following languages:
