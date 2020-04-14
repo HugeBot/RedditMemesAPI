@@ -1,5 +1,5 @@
 # RedditMemesAPI 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/HUGE-Network/RedditMemesAPI)
+[![Deploy with ZEIT Now](https://zeit.co/button/default.svg)](https://zeit.co/import/project?template=https://github.com/HUGE-Network/RedditMemesAPI)
 
 > Tiny microservice to get random Reddit memes from [r/Memes](https://www.reddit.com/r/memes/), 
 [r/DankeMemes](https://www.reddit.com/r/dankmemes/) and [r/MeIRL](https://www.reddit.com/r/meirl/), 

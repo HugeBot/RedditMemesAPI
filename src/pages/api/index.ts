@@ -1,6 +1,5 @@
 import { NowRequest, NowResponse } from '@now/node'
 import { Meme, getLocalRandomMeme, getRandomMeme } from '@blad3mak3r/reddit-memes';
-import { strict } from 'assert';
 
 export default async (req: NowRequest, res: NowResponse) => {
 
