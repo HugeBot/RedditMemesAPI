@@ -3,8 +3,10 @@ import { getRandomMeme, Meme } from '@blad3mak3r/reddit-memes';
 
 export default async (req: NowRequest, res: NowResponse) => {
 
+    const { query: { subreddit } } = req;
+
     try {
-        const meme: Meme = await getRandomMeme("BikiniBottomTwitter");
+        const meme: Meme = await getRandomMeme(subreddit.toString());
 
         res.statusCode = 200;
         res.json(meme)

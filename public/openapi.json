@@ -1,0 +1,130 @@
+{
+  "openapi" : "3.0.0",
+  "servers" : [ ],
+  "info" : {
+    "version" : "0.1.4",
+    "title" : "Huge RedditMemesAPI",
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "description" : "API used by HUGE based on [@blad3mak3r/reddit-memes](https://github.com/Blad3Mak3r/RedditMemes) project."
+  },
+  "paths" : {
+    "/api" : {
+      "get" : {
+        "summary" : "get a Random Meme",
+        "operationId" : "getRandomMeme",
+        "description" : "Get a random Meme\n",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "lang",
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "es", "en", "de", "fr", "ru", "it" ]
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Get a random meme",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Meme"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        },
+        "tags" : [ "Get Random Memes" ]
+      }
+    },
+    "/api/{subreddit}" : {
+      "get" : {
+        "summary" : "get a Random Meme from a given Subreddit",
+        "operationId" : "getRandomMemeFromSub",
+        "description" : "Get a Random Meme from a given Subreddit\n",
+        "parameters" : [ {
+          "name" : "subreddit",
+          "in" : "path",
+          "description" : "SubReddit name",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Get a random meme",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Meme"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        },
+        "tags" : [ "Get Random Memes" ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Meme" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "example" : "g18b8k"
+          },
+          "subreddit" : {
+            "type" : "string",
+            "example" : "memes"
+          },
+          "title" : {
+            "type" : "string",
+            "example" : "Naaaaaaa bro"
+          },
+          "author" : {
+            "type" : "string",
+            "example" : "kjongkilong"
+          },
+          "image" : {
+            "type" : "string",
+            "example" : "https://i.redd.it/kmapfpzn4ts41.jpg"
+          },
+          "ups" : {
+            "type" : "number",
+            "example" : 16591
+          },
+          "downs" : {
+            "type" : "number",
+            "example" : 0
+          },
+          "score" : {
+            "type" : "number",
+            "example" : 16591
+          },
+          "nsfw" : {
+            "type" : "boolean",
+            "example" : false
+          },
+          "created_utc" : {
+            "type" : "number",
+            "example" : 1586880410
+          }
+        }
+      }
+    }
+  },
+  "tags" : [ {
+    "name" : "Get Random Memes"
+  } ]
+}

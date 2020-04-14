@@ -1,6 +1,6 @@
 {
   "name": "reddit-memes",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "next": "^9.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "swagger-ui": "^3.25.0",
     "swagger-ui-react": "^3.25.0"
   },
   "devDependencies": {

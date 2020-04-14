@@ -10,7 +10,7 @@ const Swagger = () => {
     });
 
     return <div>Redirecting...</div>*/
-    return <SwaggerUI url="../public/api.json"></SwaggerUI>
+    return <SwaggerUI url="/openapi.json"></SwaggerUI>
 }
 
 export default Swagger;
