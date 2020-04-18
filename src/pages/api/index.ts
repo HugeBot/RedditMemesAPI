@@ -35,6 +35,8 @@ export default async (req: NowRequest, res: NowResponse) => {
     } catch (e) {
         console.log(e)
         res.statusCode = 500;
-        res.json({})
+        res.json({
+            error: 500
+        })
     }
 }
