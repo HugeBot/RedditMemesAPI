@@ -15,7 +15,7 @@
   "dependencies": {
     "@blad3mak3r/reddit-memes": "^0.2.2",
     "@now/node": "^1.5.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "next": "^9.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
