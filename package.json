@@ -13,7 +13,7 @@
   "author": "Blad3Mak3r",
   "license": "Apache-2.0",
   "dependencies": {
-    "@blad3mak3r/reddit-memes": "^0.2.2",
+    "@blad3mak3r/reddit-memes": "^0.2.5",
     "axios": "^0.21.1",
     "next": "^10.0.7",
     "node-fetch": "^2.6.1",
