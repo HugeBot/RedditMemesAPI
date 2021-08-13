@@ -15,7 +15,7 @@
   "dependencies": {
     "@blad3mak3r/reddit-memes": "^0.2.5",
     "axios": "^0.21.1",
-    "next": "^10.0.7",
+    "next": "^11.1.0",
     "node-fetch": "^2.6.1",
     "object-path": "^0.11.5",
     "react": "^16.13.1",
